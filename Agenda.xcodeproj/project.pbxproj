@@ -13,6 +13,10 @@
 		B5ABD6B82AD451560072ECC3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5ABD6B72AD451560072ECC3 /* Preview Assets.xcassets */; };
 		B5ABD6BA2AD451560072ECC3 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5ABD6B92AD451560072ECC3 /* Persistence.swift */; };
 		B5ABD6BD2AD451560072ECC3 /* Agenda.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5ABD6BB2AD451560072ECC3 /* Agenda.xcdatamodeld */; };
+		B5ABD6C62AD4A5190072ECC3 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5ABD6C52AD4A5190072ECC3 /* Home.swift */; };
+		B5ABD6C82AD4A77C0072ECC3 /* AgendaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5ABD6C72AD4A77C0072ECC3 /* AgendaViewModel.swift */; };
+		B5ABD6CA2AD4D5290072ECC3 /* AddNewAgenda.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5ABD6C92AD4D5290072ECC3 /* AddNewAgenda.swift */; };
+		B5ABD6CC2AD5EE610072ECC3 /* DynamicFilteredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5ABD6CB2AD5EE610072ECC3 /* DynamicFilteredView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +27,10 @@
 		B5ABD6B72AD451560072ECC3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B5ABD6B92AD451560072ECC3 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		B5ABD6BC2AD451560072ECC3 /* Agenda.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Agenda.xcdatamodel; sourceTree = "<group>"; };
+		B5ABD6C52AD4A5190072ECC3 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		B5ABD6C72AD4A77C0072ECC3 /* AgendaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaViewModel.swift; sourceTree = "<group>"; };
+		B5ABD6C92AD4D5290072ECC3 /* AddNewAgenda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewAgenda.swift; sourceTree = "<group>"; };
+		B5ABD6CB2AD5EE610072ECC3 /* DynamicFilteredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicFilteredView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +63,8 @@
 		B5ABD6AF2AD451550072ECC3 /* Agenda */ = {
 			isa = PBXGroup;
 			children = (
+				B5ABD6C42AD4A50B0072ECC3 /* ViewModel */,
+				B5ABD6C32AD4A5020072ECC3 /* View */,
 				B5ABD6B02AD451550072ECC3 /* AgendaApp.swift */,
 				B5ABD6B22AD451550072ECC3 /* ContentView.swift */,
 				B5ABD6B42AD451560072ECC3 /* Assets.xcassets */,
@@ -71,6 +81,24 @@
 				B5ABD6B72AD451560072ECC3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B5ABD6C32AD4A5020072ECC3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B5ABD6C52AD4A5190072ECC3 /* Home.swift */,
+				B5ABD6C92AD4D5290072ECC3 /* AddNewAgenda.swift */,
+				B5ABD6CB2AD5EE610072ECC3 /* DynamicFilteredView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B5ABD6C42AD4A50B0072ECC3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B5ABD6C72AD4A77C0072ECC3 /* AgendaViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +173,10 @@
 			files = (
 				B5ABD6BA2AD451560072ECC3 /* Persistence.swift in Sources */,
 				B5ABD6B32AD451550072ECC3 /* ContentView.swift in Sources */,
+				B5ABD6CA2AD4D5290072ECC3 /* AddNewAgenda.swift in Sources */,
+				B5ABD6CC2AD5EE610072ECC3 /* DynamicFilteredView.swift in Sources */,
+				B5ABD6C82AD4A77C0072ECC3 /* AgendaViewModel.swift in Sources */,
+				B5ABD6C62AD4A5190072ECC3 /* Home.swift in Sources */,
 				B5ABD6B12AD451550072ECC3 /* AgendaApp.swift in Sources */,
 				B5ABD6BD2AD451560072ECC3 /* Agenda.xcdatamodeld in Sources */,
 			);
