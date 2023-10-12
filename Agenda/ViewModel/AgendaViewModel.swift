@@ -78,6 +78,4 @@ class AgendaViewModel: ObservableObject {
             }
         }.count
     }
-
-
 }
