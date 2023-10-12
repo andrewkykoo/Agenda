@@ -189,7 +189,7 @@ struct AddOrEditAgenda: View {
                             .datePickerStyle(GraphicalDatePickerStyle())
                             .labelsHidden()
                             .padding()
-                            .background(.white, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
+                            .background(Color("ButtonColor"), in: RoundedRectangle(cornerRadius: 12, style: .continuous))
                             .padding()
                     }
                 }

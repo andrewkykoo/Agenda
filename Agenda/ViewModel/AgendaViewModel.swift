@@ -65,4 +65,19 @@ class AgendaViewModel: ObservableObject {
         context.delete(agenda)
         try? context.save()
     }
+    
+    func countOfUncompletedAgendas(for agendas: [Agenda], isToday: Bool) -> Int {
+        let currentDate = Date()
+        let calendar = Calendar.current
+        return agendas.filter { agenda in
+            guard !agenda.isCompleted else { return false }
+            if isToday {
+                return calendar.isDate(agenda.deadline ?? Date(), inSameDayAs: currentDate)
+            } else {
+                return (agenda.deadline ?? Date()) > currentDate
+            }
+        }.count
+    }
+
+
 }

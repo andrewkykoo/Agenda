@@ -16,9 +16,25 @@ struct Home: View {
     // MARK: - Fetching Agenda
     @FetchRequest(entity: Agenda.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Agenda.deadline, ascending: false)], predicate: nil, animation: .easeInOut) var agendas: FetchedResults<Agenda>
     
-    @Environment(\.self) var env
+    var todayAgendasCount: Int {
+        return agendas.filter {
+            Calendar.current.isDateInToday($0.deadline ?? Date())
+        }.count
+    }
+    
+    var upcomingAgendasCount: Int {
+        return agendas.filter {
+            let isAfterToday = $0.deadline ?? Date() > Date()
+            return isAfterToday && !Calendar.current.isDateInToday($0.deadline ?? Date())
+        }.count
+    }
+    
+    func agendaWord(forCount count: Int) -> String {
+        count == 1 ? "agenda" : "agendas"
+    }
     
     var body: some View {
+        
         ZStack {
             Color("BackgroundColor")
                 .edgesIgnoringSafeArea(.all)
@@ -26,10 +42,17 @@ struct Home: View {
             ScrollView(.vertical, showsIndicators: false) {
                 VStack {
                     VStack(alignment: .leading, spacing: 10) {
-                        Text("Hello there")
-                            .font(.callout)
                         Text("Here is your Agenda List")
                             .font(.title2.bold())
+                        
+                        let todayAgendasCount = agendaModel.countOfUncompletedAgendas(for: Array(agendas), isToday: true)
+                        let upcomingAgendasCount = agendaModel.countOfUncompletedAgendas(for: Array(agendas), isToday: false)
+                        
+                        let todayAgendaWord = agendaWord(forCount: todayAgendasCount)
+                        let upcomingAgendaWord = agendaWord(forCount: upcomingAgendasCount)
+                        
+                        Text("You have \(todayAgendasCount) \(todayAgendaWord) today and \(upcomingAgendasCount) \(upcomingAgendaWord) upcoming")
+                            .font(.footnote)
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .foregroundStyle(Color("TextColor"))
