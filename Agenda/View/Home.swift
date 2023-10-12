@@ -32,6 +32,7 @@ struct Home: View {
                             .font(.title2.bold())
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
+                    .foregroundStyle(Color("TextColor"))
                     .padding(.vertical)
                     
                     CustomSegmentedBar(currentTab: $agendaModel.currentTab, animation: animation)
@@ -61,8 +62,8 @@ struct Home: View {
                     .padding(.vertical, 12)
                     .padding(.horizontal, 24)
                     .background(
-                        Capsule()
-                            .fill(Color.gray)
+                        RoundedRectangle(cornerRadius: 25.0, style: .continuous)
+                            .fill(Color("ButtonColor"))
                     )
                 }
             }

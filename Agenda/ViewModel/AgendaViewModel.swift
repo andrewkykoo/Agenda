@@ -14,7 +14,7 @@ class AgendaViewModel: ObservableObject {
     // MARK: - New Agenda Properties
     @Published var openEditAgenda: Bool = false
     @Published var agendaTitle: String = ""
-    @Published var agendaColor: String = "Yellow"
+    @Published var agendaColor: String = ""
     @Published var agendaDeadline: Date = Date()
     @Published var agendaType: String = "Basic"
     @Published var showDatePicker: Bool = false

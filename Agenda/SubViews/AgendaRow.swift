@@ -19,9 +19,10 @@ struct AgendaRow: View {
                     .font(.callout)
                     .padding(.vertical, 5)
                     .padding(.horizontal)
+                    .foregroundStyle(Color("ButtonColor"))
                     .background {
                         Capsule()
-                            .fill(.indigo.opacity(0.3))
+                            .fill(.white.opacity(0.3))
                     }
                 
                 Spacer()
@@ -29,7 +30,6 @@ struct AgendaRow: View {
                 HStack(spacing: 15) {
                     if !agenda.isCompleted && agendaModel.currentTab != "Incomplete" {
                         Button(action: {
-                            print("clicked")
                             agendaModel.editAgenda = agenda
                             agendaModel.openEditAgenda = true
                             agendaModel.setupAgenda()
@@ -43,7 +43,7 @@ struct AgendaRow: View {
                         agendaModel.deleteAgenda(context: env, agenda: agenda)
                     }, label: {
                         Image(systemName: "trash")
-                            .foregroundStyle(.black)
+                            .foregroundStyle(Color("RedIconButtonColor"))
                     })
                 }
             }
@@ -68,6 +68,8 @@ struct AgendaRow: View {
                     .font(.caption)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
+                .foregroundStyle(Color("ButtonColor"))
+
                 
                 if !agenda.isCompleted && agendaModel.currentTab != "Incomplete" {
                     Button(action: {

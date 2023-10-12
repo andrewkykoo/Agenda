@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    init() {
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(named: "TextColor") ?? UIColor.white]
+
+    }
     var body: some View {
         NavigationView {
             Home()
