@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B56B85492AD7759A005DA13D /* AgendaRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56B85482AD7759A005DA13D /* AgendaRow.swift */; };
+		B56B854B2AD775A8005DA13D /* CustomSegmentedBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56B854A2AD775A8005DA13D /* CustomSegmentedBar.swift */; };
+		B56B854D2AD77B1B005DA13D /* AgendaList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56B854C2AD77B1B005DA13D /* AgendaList.swift */; };
 		B5ABD6B12AD451550072ECC3 /* AgendaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5ABD6B02AD451550072ECC3 /* AgendaApp.swift */; };
 		B5ABD6B32AD451550072ECC3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5ABD6B22AD451550072ECC3 /* ContentView.swift */; };
 		B5ABD6B52AD451560072ECC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5ABD6B42AD451560072ECC3 /* Assets.xcassets */; };
@@ -20,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B56B85482AD7759A005DA13D /* AgendaRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaRow.swift; sourceTree = "<group>"; };
+		B56B854A2AD775A8005DA13D /* CustomSegmentedBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedBar.swift; sourceTree = "<group>"; };
+		B56B854C2AD77B1B005DA13D /* AgendaList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaList.swift; sourceTree = "<group>"; };
 		B5ABD6AD2AD451550072ECC3 /* Agenda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Agenda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5ABD6B02AD451550072ECC3 /* AgendaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaApp.swift; sourceTree = "<group>"; };
 		B5ABD6B22AD451550072ECC3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +50,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B56B85472AD77574005DA13D /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				B56B85482AD7759A005DA13D /* AgendaRow.swift */,
+				B56B854A2AD775A8005DA13D /* CustomSegmentedBar.swift */,
+				B56B854C2AD77B1B005DA13D /* AgendaList.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
 		B5ABD6A42AD451550072ECC3 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +79,7 @@
 		B5ABD6AF2AD451550072ECC3 /* Agenda */ = {
 			isa = PBXGroup;
 			children = (
+				B56B85472AD77574005DA13D /* SubViews */,
 				B5ABD6C42AD4A50B0072ECC3 /* ViewModel */,
 				B5ABD6C32AD4A5020072ECC3 /* View */,
 				B5ABD6B02AD451550072ECC3 /* AgendaApp.swift */,
@@ -171,10 +188,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B56B854D2AD77B1B005DA13D /* AgendaList.swift in Sources */,
 				B5ABD6BA2AD451560072ECC3 /* Persistence.swift in Sources */,
+				B56B85492AD7759A005DA13D /* AgendaRow.swift in Sources */,
 				B5ABD6B32AD451550072ECC3 /* ContentView.swift in Sources */,
 				B5ABD6CA2AD4D5290072ECC3 /* AddNewAgenda.swift in Sources */,
 				B5ABD6CC2AD5EE610072ECC3 /* DynamicFilteredView.swift in Sources */,
+				B56B854B2AD775A8005DA13D /* CustomSegmentedBar.swift in Sources */,
 				B5ABD6C82AD4A77C0072ECC3 /* AgendaViewModel.swift in Sources */,
 				B5ABD6C62AD4A5190072ECC3 /* Home.swift in Sources */,
 				B5ABD6B12AD451550072ECC3 /* AgendaApp.swift in Sources */,

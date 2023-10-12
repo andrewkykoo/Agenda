@@ -45,7 +45,7 @@ struct DynamicFilteredView<Content: View, A>: View where A: NSManagedObject {
         Group {
             if request.isEmpty {
                 Text("No agenda")
-                    .font(.caption)
+                    .font(.callout)
                     .offset(y: 100)
             } else {
                 ForEach(request, id: \.objectID) { object in
