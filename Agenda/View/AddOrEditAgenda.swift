@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AddNewAgenda: View {
+struct AddOrEditAgenda: View {
     @EnvironmentObject var agendaModel: AgendaViewModel
     @Environment(\.self) var env
     @Namespace var animation
@@ -194,6 +194,6 @@ struct AddNewAgenda: View {
 }
 
 #Preview {
-    AddNewAgenda()
+    AddOrEditAgenda()
         .environmentObject(AgendaViewModel())
 }

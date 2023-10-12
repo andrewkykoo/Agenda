@@ -38,7 +38,7 @@ struct Home: View {
                         .padding(.top, 5)
                     
                     // MARK: - Agenda View
-                    AgendaList(currentTab: $agendaModel.currentTab, agenda: agendas)
+                    AgendaList(currentTab: $agendaModel.currentTab, agenda: agendas, agendaModel: agendaModel)
                 }
                 .padding()
             }
@@ -69,7 +69,7 @@ struct Home: View {
             .fullScreenCover(isPresented: $agendaModel.openEditAgenda) {
                 agendaModel.resetAgendaData()
             } content: {
-                AddNewAgenda()
+                AddOrEditAgenda()
                     .environmentObject(agendaModel)
             }
         }

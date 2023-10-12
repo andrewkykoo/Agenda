@@ -10,7 +10,7 @@ import SwiftUI
 struct AgendaList: View {
     @Binding var currentTab: String
     var agenda: FetchedResults<Agenda>
-    @StateObject var agendaModel = AgendaViewModel()
+    var agendaModel: AgendaViewModel
 
     var body: some View {
         LazyVStack(spacing: 20) {

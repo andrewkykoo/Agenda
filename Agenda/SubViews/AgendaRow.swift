@@ -26,14 +26,23 @@ struct AgendaRow: View {
                 
                 Spacer()
                 
-                // MARK: - Edit Button for incomplete agendas
-                if !agenda.isCompleted && agendaModel.currentTab != "Incomplete" {
+                HStack(spacing: 15) {
+                    if !agenda.isCompleted && agendaModel.currentTab != "Incomplete" {
+                        Button(action: {
+                            print("clicked")
+                            agendaModel.editAgenda = agenda
+                            agendaModel.openEditAgenda = true
+                            agendaModel.setupAgenda()
+                        }, label: {
+                            Image(systemName: "square.and.pencil")
+                                .foregroundStyle(.black)
+                        })
+                    }
+                    
                     Button(action: {
-                        agendaModel.editAgenda = agenda
-                        agendaModel.openEditAgenda = true
-                        agendaModel.setupAgenda()
+                        agendaModel.deleteAgenda(context: env, agenda: agenda)
                     }, label: {
-                        Image(systemName: "square.and.pencil")
+                        Image(systemName: "trash")
                             .foregroundStyle(.black)
                     })
                 }
@@ -63,7 +72,7 @@ struct AgendaRow: View {
                 if !agenda.isCompleted && agendaModel.currentTab != "Incomplete" {
                     Button(action: {
                         agenda.isCompleted.toggle()
-                            try? env.save()
+                        try? env.save()
                     }, label: {
                         Circle()
                             .strokeBorder(.black, lineWidth: 1.5)

@@ -60,4 +60,9 @@ class AgendaViewModel: ObservableObject {
             agendaDeadline = editAgenda.deadline ?? Date()
         }
     }
+    
+    func deleteAgenda(context: NSManagedObjectContext, agenda: Agenda) {
+        context.delete(agenda)
+        try? context.save()
+    }
 }
